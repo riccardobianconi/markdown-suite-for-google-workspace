@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Viewer for Google Drive</title>
+  <meta name="description" content="A Google Drive web app that renders .md files as formatted HTML directly from Google Drive — with headings, code blocks, tables, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="logo" href="./">Markdown Viewer for Google Drive</a>
+      <nav>
+        <a href="../">← Suite</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="../assets/drive-viewer/logo.svg" alt="Markdown Viewer for Google Drive" class="hero-logo">
+      <h1>Markdown Viewer for Google Drive</h1>
+      <p class="subtitle">
+        Open any <code>.md</code> file stored in Google Drive and see it rendered as
+        formatted HTML — directly from the Drive file list, with no extra software required.
+      </p>
+    </section>
+
+    <div class="products" style="grid-template-columns: 1fr;">
+      <div class="product-card">
+        <span class="tag">Google Drive Web App</span><span class="tag tag-free">Free</span>
+        <h2>Key features</h2>
+        <ul style="margin:10px 0 20px 20px;font-size:14px;color:var(--text-sec)">
+          <li>Full CommonMark rendering</li>
+          <li>Syntax-highlighted code blocks</li>
+          <li>GFM extensions: tables, footnotes, task lists, highlights</li>
+          <li>Light, dark, and system theme — follows your OS preference automatically</li>
+          <li>11 languages supported: English, Spanish, Portuguese, French, German, Italian, Japanese, Korean, Chinese, Russian, Hindi</li>
+        </ul>
+      </div>
+    </div>
+
+    <section style="margin-top:64px">
+      <h2>Documentation &amp; Help</h2>
+      <p>
+        Need help getting started or have a question?
+        See the <a href="help/">Help &amp; Documentation</a> section.
+      </p>
+    </section>
+
+    <section style="margin-top:48px">
+      <h2>Privacy &amp; Terms</h2>
+      <p>
+        This web app runs entirely within Google's infrastructure (Apps Script).
+        No file data is sent to external servers.
+        See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>
+        for full details.
+      </p>
+    </section>
+
+    <section style="margin-top:48px">
+      <h2>Support &amp; Feedback</h2>
+      <p>
+        Found a bug or have a feature request? Open an issue on
+        <a href="https://github.com/riccardobianconi/markdown-suite-for-google-workspace/issues">GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 Riccardo Bianconi &mdash;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+
+</body>
+</html>

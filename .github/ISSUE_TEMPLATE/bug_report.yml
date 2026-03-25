@@ -1,0 +1,75 @@
+name: Bug Report
+description: Report a bug in one of the Markdown Suite apps
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options:
+        - Markdown Manager for Google Docs™
+        - Markdown Viewer for Google Drive
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      placeholder: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      placeholder: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      placeholder: What actually happened. Include screenshots if applicable.
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome 123, Safari 17
+
+  - type: dropdown
+    id: account_type
+    attributes:
+      label: Google Workspace account type
+      options:
+        - Personal (free Google account)
+        - Google Workspace (Business / Education)
+
+  - type: input
+    id: version
+    attributes:
+      label: App version (if known)
+      placeholder: Visible in the Credits dialog
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      placeholder: Any other information that might help.

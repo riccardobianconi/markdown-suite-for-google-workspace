@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest a new feature or improvement for one of the Markdown Suite apps
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options:
+        - Markdown Manager for Google Docs™
+        - Markdown Viewer for Google Drive
+        - General / Suite
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem or motivation
+      placeholder: |
+        Is your feature request related to a problem? Describe it.
+        e.g. "I find it frustrating when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      placeholder: Describe what you'd like to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Any alternative solutions or features you've considered.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      placeholder: Add any other context, mockups, or examples here.

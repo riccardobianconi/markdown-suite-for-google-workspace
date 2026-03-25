@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Markdown Viewer for Google Drive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="logo" href="./">Markdown Viewer for Google Drive</a>
+      <nav>
+        <a href="../">← Suite</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="prose">
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: March 2026</em></p>
+
+    <p>
+      This Privacy Policy applies to <strong>Markdown Viewer for Google Drive</strong>,
+      a Google Workspace Web App.
+    </p>
+
+    <h2>1. Data we access</h2>
+    <p>
+      This web app requests the following OAuth scopes:
+    </p>
+    <ul>
+      <li>
+        <code>https://www.googleapis.com/auth/drive.readonly</code> —
+        read the content of the Markdown file the user opens via
+        the "Open with" handler in Google Drive.
+        Only the specific file opened is accessed; no other Drive files are read.
+      </li>
+      <li>
+        <code>https://www.googleapis.com/auth/script.container.ui</code> —
+        serve the web app interface.
+      </li>
+    </ul>
+
+    <h2>2. How data is used</h2>
+    <p>
+      File content is used exclusively to render the Markdown viewer UI.
+      Data is processed entirely within Google's Apps Script infrastructure
+      and is never transmitted to any external server, database, or third party.
+    </p>
+
+    <h2>3. Data storage</h2>
+    <p>
+      The application does not store or persist any file content or
+      personally identifiable information. No analytics, cookies, or tracking
+      technologies are used.
+    </p>
+
+    <h2>4. Third-party services</h2>
+    <p>
+      The rendered Markdown view loads the following resources from public CDNs
+      at render time:
+    </p>
+    <ul>
+      <li>markdown-it and plugins — <code>cdn.jsdelivr.net</code></li>
+      <li>highlight.js — <code>cdnjs.cloudflare.com</code></li>
+      <li>Google Fonts (Roboto Mono, Material Icons Round) — <code>fonts.googleapis.com</code></li>
+    </ul>
+    <p>
+      These requests are made by the user's browser directly to those CDNs.
+      All external resources are loaded with
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a>
+      verification — if a CDN asset is tampered with, the browser will refuse to load it.
+      Please review their respective privacy policies for information on how
+      they handle request data.
+    </p>
+
+    <h2>5. Contact</h2>
+    <p>
+      For privacy-related questions, please open an issue on the
+      <a href="https://github.com/riccardobianconi/markdown-suite-for-google-workspace/issues">GitHub issue tracker</a>
+      or contact the developer directly via their website.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 Riccardo Bianconi &mdash;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+
+</body>
+</html>

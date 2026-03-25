@@ -1,0 +1,29 @@
+name: Support / Question
+description: Ask a question or get help using one of the Markdown Suite apps
+title: "[SUPPORT] "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options:
+        - Markdown Manager for Google Docs™
+        - Markdown Viewer for Google Drive
+        - General / Suite
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      placeholder: Describe what you're trying to do or what you don't understand.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      placeholder: Any screenshots, examples, or details that might help.
