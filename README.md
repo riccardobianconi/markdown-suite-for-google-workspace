@@ -1,25 +1,36 @@
 # Markdown Suite for Google Workspace™
 
-![Markdown Suite for Google Workspace™](assets/workspace-suite/logo.svg)
+![Markdown Suite for Google Workspace™](docs/assets/workspace-suite/logo.svg)
 
-Umbrella repository for two complementary tools that bring Markdown support to Google Workspace.
+Umbrella repository for a set of tools that bring Markdown support to Google Workspace.
+
+**[Visit the project site →](https://riccardobianconi.github.io/markdown-suite-for-google-workspace/)**
 
 ---
 
 ## Products
 
 ### Markdown Manager for Google Docs™
-A Google Workspace **Add-on** that adds an interactive sidebar to Google Docs.
-- Parses Markdown syntax written directly in a Google Doc
-- Shows a live structural tree (headings, lists, code blocks, tables, footnotes…)
-- Click-to-navigate, drag-and-drop section reordering, full-document Markdown preview
+`Google Docs Add-on` · Free
+
+Adds an interactive sidebar to Google Docs that reads Markdown syntax written directly in your document. Navigate headings, search, reorder sections with drag-and-drop, and preview rendered Markdown — all without leaving Docs.
+
+- Live structural tree (headings, lists, code blocks, tables…)
+- Click-to-navigate: jump to any element in the document
+- Drag-and-drop section reordering
+- Full-document Markdown preview with syntax highlighting
+- Light, dark, and system theme
 - 11 languages supported
 
 ### Markdown Viewer for Google Drive
-A Google Workspace **Web App** that renders `.md` files stored in Google Drive.
-- "Open with" handler — open any Markdown file directly from the Drive file list
-- Full CommonMark rendering (markdown-it) with syntax highlighting (highlight.js)
-- Dark mode, GFM extensions (tables, footnotes, task lists, highlights)
+`Google Drive Web App` · Free
+
+Open any `.md` file stored in Google Drive and see it rendered as formatted HTML — with headings, code blocks, tables, footnotes, and more. Works as a native "Open with" handler directly from the Drive file list.
+
+- Full CommonMark rendering
+- Syntax-highlighted code blocks
+- GFM extensions: tables, footnotes, task lists, highlights
+- Light, dark, and system theme
 - 11 languages supported
 
 ---
@@ -39,13 +50,6 @@ The source code for each product lives in its own private repository.
 
 [Open an issue](../../issues/new/choose) to report a bug or request a feature.
 Please use the provided templates and indicate which app you're referring to.
-
----
-
-## Privacy & Legal
-
-- [Privacy Policy](https://riccardobianconi.github.io/markdown-suite-for-google-workspace/privacy.html)
-- [Terms of Service](https://riccardobianconi.github.io/markdown-suite-for-google-workspace/terms.html)
 
 ---
 
