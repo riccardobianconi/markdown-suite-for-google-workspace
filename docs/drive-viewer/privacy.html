@@ -23,7 +23,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: March 24, 2026</em></p>
+    <p><em>Last updated: April 2, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Viewer for Google Drive</strong>,
@@ -63,19 +63,43 @@
       Data access is strictly limited to what is necessary for the app to function.
     </p>
 
-    <h2>3. Data storage</h2>
+    <h2>3. Data sharing, transfer, and disclosure</h2>
     <p>
-      The application does not store or persist any file content or
-      personally identifiable information. No analytics, cookies, or tracking
-      technologies are used.
+      We do not share, transfer, sell, or disclose Google user data to any third party.
+      File content is never transmitted to any third-party server or external service.
     </p>
     <p>
+      The only external network requests made by the application are to load static assets
+      (markdown-it, highlight.js, Google Fonts) from public CDNs at render time.
+      These requests are initiated by the user's browser and contain no user data or file content.
+    </p>
+    <p>
+      User data may be disclosed only if required by applicable law or a valid legal process.
+    </p>
+
+    <h2>4. Data retention and deletion</h2>
+    <p>
+      The application retains no user data. File content exists solely in memory for the
+      duration of the rendering request and is never written to any persistent storage,
+      database, or log. No analytics, cookies, or tracking technologies are used.
+    </p>
+    <p>
+      Because no data is stored, there is nothing to delete. Access to Drive files
+      terminates immediately when the user closes the app or revokes permissions.
       To revoke this app's access to your Google account at any time, visit
       <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
       and remove <em>Markdown Viewer for Google Drive</em>.
     </p>
 
-    <h2>4. Third-party services</h2>
+    <h2>5. Data protection</h2>
+    <p>
+      All file processing occurs exclusively within Google's Apps Script infrastructure,
+      which is subject to Google's own security and privacy standards.
+      The application runs with <code>executeAs: USER_ACCESSING</code>, meaning it operates
+      under the accessing user's own Drive permissions — it cannot read files the user
+      does not already have access to.
+    </p>
+    <h2>6. Third-party services</h2>
     <p>
       The rendered Markdown view loads the following resources from public CDNs
       at render time:
@@ -94,7 +118,7 @@
       they handle request data.
     </p>
 
-    <h2>5. Google API Services User Data Policy</h2>
+    <h2>7. Google API Services User Data Policy</h2>
     <p>
       Markdown Viewer for Google Drive's use and transfer to any other app of information
       received from Google APIs will adhere to the
@@ -102,7 +126,7 @@
       including the Limited Use requirements.
     </p>
 
-    <h2>6. Contact</h2>
+    <h2>8. Contact</h2>
     <p>
       For privacy-related questions, contact the developer at
       <a href="mailto:info@riccardobianconi.it">info@riccardobianconi.it</a>
