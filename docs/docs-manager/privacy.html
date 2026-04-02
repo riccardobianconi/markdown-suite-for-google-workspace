@@ -23,7 +23,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: March 24, 2026</em></p>
+    <p><em>Last updated: April 2, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Manager for Google Docs™</strong>,
@@ -64,16 +64,41 @@
       Data access is strictly limited to what is necessary for the add-on to function.
     </p>
 
-    <h2>3. Data storage</h2>
+    <h2>3. Data sharing and disclosure</h2>
     <p>
-      The application does not store or persist any document content or
-      personally identifiable information. No analytics, cookies, or tracking
-      technologies are used.
+      We do not share, transfer, sell, or disclose Google user data to any third party,
+      with the following sole exceptions:
+    </p>
+    <ul>
+      <li>when required by applicable law or a binding legal process;</li>
+      <li>to protect the rights, property, or safety of users or the public.</li>
+    </ul>
+    <p>
+      Document content accessed through the <code>auth/documents</code> scope is
+      processed in-memory within Google's Apps Script runtime only.
+      It is never stored on external servers or shared with any service outside Google's infrastructure.
+    </p>
+
+    <h2>4. Data protection</h2>
+    <p>
+      All data processed by this add-on benefits from Google's built-in security model:
+    </p>
+    <ul>
+      <li>All communication between the add-on and Google's servers occurs over TLS-encrypted connections.</li>
+      <li>Document content is processed in-memory within Google Apps Script and is never written to external storage.</li>
+      <li>The only value persisted server-side is your theme preference (a single string: <code>light</code>, <code>dark</code>, or <code>system</code>), stored via Google's <code>PropertiesService</code> — it contains no document data or personally identifiable information.</li>
+      <li>Access to the add-on's functionality is limited to the authenticated Google account that installed it.</li>
+    </ul>
+
+    <h2>5. Data retention and deletion</h2>
+    <p>
+      Document content is never retained. It is read from the active document on demand,
+      used to render the sidebar or preview, and discarded — no document data is stored
+      between sessions or after the add-on closes.
     </p>
     <p>
-      The only value stored server-side is your theme preference (light / dark / system),
-      saved via Google's <code>PropertiesService</code> and associated with your Google account.
-      It contains no document data and can be cleared by uninstalling the add-on.
+      The only persisted data is the theme preference described above. It is automatically
+      deleted when you uninstall the add-on.
     </p>
     <p>
       To revoke this add-on's access to your Google account at any time, visit
@@ -81,7 +106,7 @@
       and remove <em>Markdown Manager for Google Docs™</em>.
     </p>
 
-    <h2>4. Third-party services</h2>
+    <h2>6. Third-party services</h2>
     <p>
       The rendered Markdown preview loads the following resources from public CDNs
       at render time:
@@ -100,7 +125,7 @@
       they handle request data.
     </p>
 
-    <h2>5. Google API Services User Data Policy</h2>
+    <h2>7. Google API Services User Data Policy</h2>
     <p>
       Markdown Manager for Google Docs™'s use and transfer to any other app of information
       received from Google APIs will adhere to the
@@ -108,7 +133,7 @@
       including the Limited Use requirements.
     </p>
 
-    <h2>6. Contact</h2>
+    <h2>8. Contact</h2>
     <p>
       For privacy-related questions, contact the developer at
       <a href="mailto:info@riccardobianconi.it">info@riccardobianconi.it</a>
