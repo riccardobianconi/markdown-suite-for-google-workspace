@@ -23,7 +23,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: April 2, 2026</em></p>
+    <p><em>Last updated: April 3, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Manager for Google Docs™</strong>,
@@ -36,10 +36,12 @@
     </p>
     <ul>
       <li>
-        <code>https://www.googleapis.com/auth/documents</code> —
-        read and write the content of the active Google Doc.
+        <code>https://www.googleapis.com/auth/documents.currentonly</code> —
+        read and write the content of the currently open Google Doc only.
         This is required to parse the document structure, navigate to elements,
         and reorder sections when the user drags a node in the sidebar.
+        This scope grants access exclusively to the document open in the editor
+        at the time the add-on runs — no other documents are accessible.
       </li>
       <li>
         <code>https://www.googleapis.com/auth/script.container.ui</code> —
@@ -74,7 +76,7 @@
       <li>to protect the rights, property, or safety of users or the public.</li>
     </ul>
     <p>
-      Document content accessed through the <code>auth/documents</code> scope is
+      Document content accessed through the <code>auth/documents.currentonly</code> scope is
       processed in-memory within Google's Apps Script runtime only.
       It is never stored on external servers or shared with any service outside Google's infrastructure.
     </p>
