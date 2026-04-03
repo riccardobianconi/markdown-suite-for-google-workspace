@@ -23,7 +23,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: April 2, 2026</em></p>
+    <p><em>Last updated: April 3, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Viewer for Google Drive</strong>,
@@ -36,14 +36,11 @@
     </p>
     <ul>
       <li>
-        <code>https://www.googleapis.com/auth/drive.readonly</code> —
-        read the content of the Markdown file the user opens via
+        <code>https://www.googleapis.com/auth/drive.file</code> —
+        access the specific Markdown file the user opens via
         the "Open with" handler in Google Drive.
-        Only the specific file opened is accessed; no other Drive files are read.
-      </li>
-      <li>
-        <code>https://www.googleapis.com/auth/script.container.ui</code> —
-        serve the web app interface.
+        Only the individual file explicitly opened by the user is accessible;
+        the app cannot access any other file in Drive.
       </li>
     </ul>
 
