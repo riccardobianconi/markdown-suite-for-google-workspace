@@ -42,13 +42,18 @@
         Only the individual file explicitly opened by the user is accessible;
         the app cannot access any other file in Drive.
       </li>
+      <li>
+        <code>https://www.googleapis.com/auth/drive.install</code> —
+        allows the app to appear in the Google Drive "Open with" menu.
+        This scope does not grant access to any files or user data.
+      </li>
     </ul>
 
     <h2>2. How data is used</h2>
     <p>
       File content is used exclusively to render the Markdown viewer UI.
-      Data is processed entirely within Google's Apps Script infrastructure
-      and is never transmitted to any external server, database, or third party.
+      It is read server-side within Google's Apps Script infrastructure and rendered
+      in your browser — it is never transmitted to any external server, database, or third party.
     </p>
     <p>We do not:</p>
     <ul>
@@ -104,10 +109,12 @@
     <ul>
       <li>markdown-it and plugins — <code>cdn.jsdelivr.net</code></li>
       <li>highlight.js — <code>cdnjs.cloudflare.com</code></li>
-      <li>Google Fonts (Roboto Mono, Material Icons Round) — <code>fonts.googleapis.com</code></li>
+      <li>Google Fonts (Google Sans, Roboto Mono, Material Icons Round) — <code>fonts.googleapis.com</code></li>
     </ul>
     <p>
-      These requests are made by the user's browser directly to those CDNs.
+      Google Fonts is loaded on every page load (including error states) for the app UI.
+      The remaining resources are loaded only when a file is rendered.
+      These requests are made by the user's browser directly to those CDNs and contain no user data or file content.
       All external resources are loaded with
       <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a>
       verification — if a CDN asset is tampered with, the browser will refuse to load it.

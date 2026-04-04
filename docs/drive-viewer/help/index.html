@@ -35,8 +35,9 @@
     <h2>Rendering overview</h2>
     <p>
       The viewer renders your Markdown file using full CommonMark support via markdown-it,
-      including syntax-highlighted code blocks (highlight.js) and GFM extensions:
-      tables, footnotes, task lists, and highlights.
+      including syntax-highlighted code blocks (highlight.js), GFM extensions
+      (tables, footnotes, task lists, highlights, subscript, superscript),
+      and automatic anchor links on headings for in-page navigation.
     </p>
 
     <h2>Theme</h2>
@@ -50,7 +51,7 @@
     <h2>Permissions</h2>
     <p>
       When you open the app for the first time, Google will ask you to grant access.
-      The app requests the following permission:
+      The app requests the following permissions:
     </p>
     <ul>
       <li>
@@ -58,6 +59,12 @@
         <code>drive.file</code> scope. This gives the app access exclusively to
         the file you chose to open. It cannot read, list, or access any other
         file in your Drive.
+      </li>
+      <li>
+        <strong>Google Drive (menu integration)</strong> —
+        <code>drive.install</code> scope. This allows the app to appear in the
+        "Open with" menu in Google Drive. It does not grant access
+        to any files.
       </li>
     </ul>
     <p>
