@@ -47,6 +47,12 @@
         allows the app to appear in the Google Drive "Open with" menu.
         This scope does not grant access to any files or user data.
       </li>
+      <li>
+        <code>https://www.googleapis.com/auth/script.external_request</code> —
+        required for the app to call the Google Drive REST API server-side
+        (within Google's Apps Script infrastructure) to download the file content.
+        No data is sent to any third-party server.
+      </li>
     </ul>
 
     <h2>2. How data is used</h2>
@@ -71,9 +77,12 @@
       File content is never transmitted to any third-party server or external service.
     </p>
     <p>
-      The only external network requests made by the application are to load static assets
+      The application makes two types of network requests beyond the core Apps Script execution:
+      server-side calls to the Google Drive REST API (<code>googleapis.com</code>) to download
+      the file content — these stay entirely within Google's infrastructure and contain no data
+      transmitted to third parties — and client-side requests to load static assets
       (markdown-it, highlight.js, Google Fonts) from public CDNs at render time.
-      These requests are initiated by the user's browser and contain no user data or file content.
+      The CDN requests are initiated by the user's browser and contain no user data or file content.
     </p>
     <p>
       User data may be disclosed only if required by applicable law or a valid legal process.
