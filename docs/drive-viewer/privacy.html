@@ -24,7 +24,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: April 3, 2026</em></p>
+    <p><em>Last updated: May 8, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Viewer for Google Drive</strong>,
@@ -38,9 +38,9 @@
     <ul>
       <li>
         <code>https://www.googleapis.com/auth/drive.file</code> —
-        access the specific Markdown file the user opens via
+        access the specific Markdown file (or files) the user opens via
         the "Open with" handler in Google Drive.
-        Only the individual file explicitly opened by the user is accessible;
+        Only the files explicitly opened by the user are accessible;
         the app cannot access any other file in Drive.
       </li>
       <li>
@@ -51,7 +51,8 @@
       <li>
         <code>https://www.googleapis.com/auth/script.external_request</code> —
         required for the app to call the Google Drive REST API server-side
-        (within Google's Apps Script infrastructure) to download the file content.
+        (within Google's Apps Script infrastructure) to fetch file names (metadata)
+        and download file content.
         No data is sent to any third-party server.
       </li>
     </ul>
@@ -61,6 +62,11 @@
       File content is used exclusively to render the Markdown viewer UI.
       It is read server-side within Google's Apps Script infrastructure and rendered
       in your browser — it is never transmitted to any external server, database, or third party.
+    </p>
+    <p>
+      When multiple files are opened in the same session, only the first file is fetched
+      immediately; the content of each additional file is read on demand, server-side,
+      the first time the user switches to it through the in-app file picker.
     </p>
     <p>We do not:</p>
     <ul>
@@ -79,8 +85,9 @@
     </p>
     <p>
       The application makes two types of network requests beyond the core Apps Script execution:
-      server-side calls to the Google Drive REST API (<code>googleapis.com</code>) to download
-      the file content — these stay entirely within Google's infrastructure and contain no data
+      server-side calls to the Google Drive REST API (<code>googleapis.com</code>) to fetch
+      file names (metadata) and download the content of each file the user opens —
+      these stay entirely within Google's infrastructure and contain no data
       transmitted to third parties — and client-side requests to load static assets
       (markdown-it, highlight.js, Google Fonts) from public CDNs at render time.
       The CDN requests are initiated by the user's browser and contain no user data or file content.
@@ -91,13 +98,19 @@
 
     <h2>4. Data retention and deletion</h2>
     <p>
-      The application retains no user data. File content exists solely in memory for the
-      duration of the rendering request and is never written to any persistent storage,
-      database, or log. No analytics, cookies, or tracking technologies are used.
+      File content exists solely in memory for the duration of the rendering request
+      and is never written to any persistent storage, database, or log.
+      The only data persisted by the application is a short-lived list of the file IDs
+      opened in the current session, stored in Google's per-user Apps Script Properties
+      as a security allowlist; it is overwritten on each new session and never leaves
+      Google's infrastructure.
+      No analytics, cookies, or tracking technologies are used.
     </p>
     <p>
-      Because no data is stored, there is nothing to delete. Access to Drive files
-      terminates immediately when the user closes the app or revokes permissions.
+      Access to Drive files terminates immediately when the user closes the app
+      or revokes permissions. The session allowlist described above is overwritten
+      the next time the user opens a file in the app, and becomes inaccessible
+      to the application if the user revokes its permissions from their Google account.
       To revoke this app's access to your Google account at any time, visit
       <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
       and remove <em>Markdown Viewer for Google Drive</em>.

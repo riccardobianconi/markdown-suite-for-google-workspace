@@ -32,6 +32,13 @@
       right-click any <code>.md</code> file in Google Drive and choose
       <strong>Open with → Markdown Viewer</strong>.
     </p>
+    <p>
+      You can also select <strong>up to 20 files at once</strong> in Google Drive
+      (Shift-click or Ctrl/Cmd-click to multi-select) and choose
+      <strong>Open with → Markdown Viewer</strong> to open them all together.
+      A file picker will appear in the top bar, letting you switch between
+      the open files at any time.
+    </p>
 
     <h2>Rendering overview</h2>
     <p>
@@ -39,6 +46,25 @@
       including syntax-highlighted code blocks (highlight.js), GFM extensions
       (tables, footnotes, task lists, highlights, subscript, superscript),
       and automatic anchor links on headings for in-page navigation.
+    </p>
+
+    <h2>Working with multiple files</h2>
+    <p>
+      When you open more than one file at the same time, a <strong>file picker</strong>
+      appears in the top bar, next to the file name. Click it to see the list of
+      open files and jump to any of them — the active file is marked so you always
+      know where you are, and the page title updates to match.
+    </p>
+    <p>
+      Only the first file is loaded immediately; the others are fetched
+      <strong>on demand</strong> the first time you open them from the picker.
+      You may briefly see a loading spinner while the content is retrieved —
+      this keeps the app fast even when you open many files at once.
+    </p>
+    <p>
+      You can keep up to <strong>20 files</strong> open in a single session.
+      If you select more than 20 files in Google Drive, the viewer will ask
+      you to reduce the selection before opening.
     </p>
 
     <h2>Theme</h2>
@@ -56,10 +82,10 @@
     </p>
     <ul>
       <li>
-        <strong>Google Drive (specific file only)</strong> —
+        <strong>Google Drive (specific files only)</strong> —
         <code>drive.file</code> scope. This gives the app access exclusively to
-        the file you chose to open. It cannot read, list, or access any other
-        file in your Drive.
+        the file (or files) you chose to open. It cannot read, list, or access
+        any other file in your Drive.
       </li>
       <li>
         <strong>Google Drive (menu integration)</strong> —
@@ -70,8 +96,8 @@
       <li>
         <strong>External requests</strong> —
         <code>script.external_request</code> scope. Required for the app to
-        call the Google Drive REST API server-side to download the file content.
-        All requests stay within Google's infrastructure.
+        call the Google Drive REST API server-side to fetch file names (metadata)
+        and download file content. All requests stay within Google's infrastructure.
       </li>
     </ul>
     <p>
