@@ -66,6 +66,29 @@
       Your choice is saved per Google account and persists across sessions.
     </p>
 
+    <h2>Known limitations</h2>
+
+    <h3 id="multiple-google-accounts">Multiple Google accounts in the same browser</h3>
+    <p>
+      If you are signed into multiple Google accounts in the same browser,
+      the sidebar or preview dialog may fail to load with a
+      <strong>"Page not found"</strong> or <strong>404</strong> error.
+    </p>
+    <p>
+      This is a
+      <a href="https://developers.google.com/apps-script/guides/support/troubleshooting">known limitation</a>
+      of Google Apps Script that affects all web apps and add-ons built on the
+      platform. When multiple accounts are active, Google's routing layer
+      rewrites the app URL in a way that Apps Script cannot handle, and the
+      request fails before the add-on code is even reached.
+    </p>
+    <p><strong>Workarounds:</strong></p>
+    <ul>
+      <li>Open the document in an <strong>incognito window</strong> (or private browsing) where only the desired account is signed in.</li>
+      <li>Use a <strong>separate Chrome profile</strong> for each Google account.</li>
+      <li>Sign out of all other accounts and sign in only with the account you want to use.</li>
+    </ul>
+
     <h2>Support</h2>
     <p>
       For questions or bug reports, open an issue on the
