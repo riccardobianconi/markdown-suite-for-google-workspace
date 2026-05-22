@@ -33,6 +33,31 @@
       Go to <strong>Extensions → Markdown Manager for Google Docs™ → Open Markdown Manager</strong> to launch the panel.
     </p>
 
+    <h2>Recommended Google Docs settings</h2>
+    <p>
+      The add-on reads the literal Markdown syntax in your document text
+      (e.g. <code>#&nbsp;heading</code>, <code>**bold**</code>, <code>-&nbsp;item</code>).
+      Google Docs ships with several auto-corrections enabled by default
+      that silently rewrite this syntax as you type, removing the markers
+      the add-on relies on.
+    </p>
+    <p>
+      Open <strong>Tools → Preferences</strong> in Google Docs and review the
+      following options.
+    </p>
+    <p><strong>Required — turn off:</strong></p>
+    <ul>
+      <li><strong>Enable Markdown</strong> — the most important one. With this on, Google Docs converts Markdown shortcuts into native Docs formatting while you type, leaving no Markdown syntax for the add-on to detect.</li>
+      <li><strong>Use smart quotes</strong> — replaces straight quotes (<code>"</code>, <code>'</code>) with curly ones, which breaks code spans, fenced code blocks, and link titles.</li>
+      <li><strong>Automatically detect lists</strong> — converts <code>-&nbsp;item</code> and <code>1.&nbsp;item</code> into native Docs list items instead of leaving the marker as text.</li>
+    </ul>
+    <p><strong>Recommended — turn off:</strong></p>
+    <ul>
+      <li><strong>Automatically detect links</strong> — can interfere with <code>[label](url)</code> syntax by turning the URL into an active link mid-typing.</li>
+      <li><strong>Insert emojis using the colon character</strong> — replaces <code>:shortcode:</code> sequences with emoji characters.</li>
+      <li><strong>Automatically correct spelling</strong> and <strong>Automatically capitalize words</strong> — useful for prose, but can mangle code, technical identifiers, and deliberate Markdown markers.</li>
+    </ul>
+
     <h2>Sidebar overview</h2>
     <p>
       The sidebar displays a live structural tree of your document based on Markdown syntax.
