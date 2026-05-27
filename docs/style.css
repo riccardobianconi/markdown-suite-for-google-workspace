@@ -24,6 +24,7 @@ body {
 .site-header {
   border-bottom: 1px solid var(--border);
   padding: 16px 24px;
+  position: relative;
 }
 .site-header .inner {
   max-width: var(--max-w);
@@ -49,6 +50,61 @@ body {
   text-decoration: none;
 }
 .site-header nav a:hover { text-decoration: underline; }
+
+/* ── Hamburger (mobile nav) ───────────────────────────────────────────────── */
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text);
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.nav-toggle:hover { background: var(--border); }
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+
+@media (max-width: 767px) {
+  .nav-toggle { display: flex; }
+  .site-header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    margin-left: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    padding: 8px 0;
+    z-index: 50;
+  }
+  .site-header nav a {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+  .site-header.nav-open nav { display: flex; }
+  .site-header.nav-open .nav-toggle span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .site-header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .site-header.nav-open .nav-toggle span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
 
 /* ── Main content ─────────────────────────────────────────────────────────── */
 main {
@@ -137,6 +193,14 @@ a  { color: var(--blue); }
   background: #e6f4ea;
   color: #1e8e3e;
   margin-left: 6px;
+}
+
+/* ── Marketplace badge ────────────────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .hero img[src*="gwmBadge"] {
+    height: auto !important;
+    max-width: 100%;
+  }
 }
 
 /* ── Prose (policy / terms pages) ────────────────────────────────────────── */
