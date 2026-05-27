@@ -20,6 +20,29 @@ body {
   line-height: 1.6;
 }
 
+/* ── Umbrella bar (per-app pages: indicates suite membership) ────────────── */
+.umbrella-bar {
+  background: #202124;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 24px;
+}
+.umbrella-bar .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.umbrella-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+.umbrella-bar a:hover { text-decoration: underline; }
+.umbrella-bar.star-only .inner { justify-content: flex-end; }
+
 /* ── Header ───────────────────────────────────────────────────────────────── */
 .site-header {
   border-bottom: 1px solid var(--border);
