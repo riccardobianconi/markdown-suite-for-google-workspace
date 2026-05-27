@@ -75,7 +75,7 @@ body {
   transition: transform .2s, opacity .2s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .nav-toggle { display: flex; }
   .site-header nav {
     display: none;
