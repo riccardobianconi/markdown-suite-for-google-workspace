@@ -9,7 +9,7 @@ body:
       label: Which app?
       options:
         - Markdown Manager for Google Docs™
-        - Markdown Viewer for Google Drive
+        - Markdown Viewer for Google Drive™
         - General / Suite
     validations:
       required: true
