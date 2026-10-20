@@ -35,7 +35,7 @@
 
   <main class="prose">
     <h1>Privacy Policy</h1>
-    <p><em>Last updated: May 8, 2026</em></p>
+    <p><em>Last updated: October 20, 2026</em></p>
 
     <p>
       This Privacy Policy applies to <strong>Markdown Viewer for Google Drive™</strong>,
@@ -100,7 +100,7 @@
       file names (metadata) and download the content of each file the user opens —
       these stay entirely within Google's infrastructure and contain no data
       transmitted to third parties — and client-side requests to load static assets
-      (markdown-it, highlight.js, Google Fonts) from public CDNs at render time.
+      (markdown-it, highlight.js, Mermaid, Google Fonts) from public CDNs at render time.
       The CDN requests are initiated by the user's browser and contain no user data or file content.
     </p>
     <p>
@@ -143,11 +143,14 @@
     <ul>
       <li>markdown-it and plugins — <code>cdn.jsdelivr.net</code></li>
       <li>highlight.js — <code>cdnjs.cloudflare.com</code></li>
+      <li>Mermaid — <code>cdn.jsdelivr.net</code></li>
       <li>Google Fonts (Google Sans, Roboto Mono, Material Icons Round) — <code>fonts.googleapis.com</code></li>
     </ul>
     <p>
       Google Fonts is loaded on every page load (including error states) for the app UI.
-      The remaining resources are loaded only when a file is rendered.
+      The remaining resources are loaded only when a file is rendered,
+      and Mermaid only when a diagram is about to be shown: it runs in an isolated
+      sandboxed frame that has no access to the file, the app or your account.
       These requests are made by the user's browser directly to those CDNs and contain no user data or file content.
       All external resources are loaded with
       <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a>

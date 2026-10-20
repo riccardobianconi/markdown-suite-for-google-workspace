@@ -43,7 +43,7 @@
       Go to <strong>Extensions → Markdown Manager for Google Docs™ → Open Markdown Manager</strong> to launch the panel.
     </p>
 
-    <h2>Recommended Google Docs settings</h2>
+    <h2 id="recommended-settings">Recommended Google Docs settings</h2>
     <p>
       The add-on reads the literal Markdown syntax in your document text
       (e.g. <code>#&nbsp;heading</code>, <code>**bold**</code>, <code>-&nbsp;item</code>).
@@ -60,6 +60,7 @@
       <li><strong>Enable Markdown</strong> — the most important one. With this on, Google Docs converts Markdown shortcuts into native Docs formatting while you type, leaving no Markdown syntax for the add-on to detect.</li>
       <li><strong>Use smart quotes</strong> — replaces straight quotes (<code>"</code>, <code>'</code>) with curly ones, which breaks code spans, fenced code blocks, and link titles.</li>
       <li><strong>Automatically detect lists</strong> — converts <code>-&nbsp;item</code> and <code>1.&nbsp;item</code> into native Docs list items instead of leaving the marker as text.</li>
+      <li><strong>Automatic substitution</strong> (in the <strong>Substitutions</strong> tab) — replaces character sequences while you type: <code>--&gt;</code> becomes →, <code>--</code> becomes –, <code>---</code> becomes —, <code>(c)</code> becomes © and so on. This breaks Mermaid arrows, horizontal rules, setext headings and table separators. If you prefer to keep it on, paste such lines instead of typing them: a pasted <code>--&gt;</code> is replaced only if you type a space or press Enter right after it.</li>
     </ul>
     <p><strong>Recommended — turn off:</strong></p>
     <ul>
@@ -90,7 +91,47 @@
     <p>
       Click the <strong>Markdown Preview</strong> button at the top of the sidebar to open
       a full-document preview rendered as formatted Markdown — with syntax-highlighted
-      code blocks, tables, footnotes, and more.
+      code blocks, tables, footnotes, <a href="#mermaid-diagrams">Mermaid diagrams</a>, and more.
+    </p>
+
+    <h2 id="mermaid-diagrams">Mermaid diagrams</h2>
+    <p>
+      Code blocks tagged <code>mermaid</code> are drawn as diagrams
+      (see the <a href="https://mermaid.js.org/intro/syntax-reference.html">Mermaid syntax reference</a>).
+      Every diagram type of Mermaid 12 is supported —
+      flowcharts, sequence, class, state, entity-relationship, Gantt, pie, mind maps,
+      timelines, Git graphs and more — except ZenUML, which is a separate plugin.
+      Math in labels (<code>$$…$$</code>) and the ELK layout (<code>layout: elk</code>) work too.
+    </p>
+    <p>
+      Diagrams are drawn as they come into view, so a long document with many
+      diagrams opens as quickly as one without; until then you see the diagram's source.
+      They follow the light or dark theme (a theme set inside the diagram is ignored),
+      and links in a diagram open in a new tab.
+    </p>
+    <p>
+      If a diagram contains an error, its source stays visible with Mermaid's
+      error message underneath, which usually points to the line and position of the problem.
+      Diagrams typed in Google Docs are often broken by its automatic corrections,
+      so the message also links to the <a href="#recommended-settings">recommended settings</a> above.
+    </p>
+    <h3 id="zoom-and-pan">Zoom and pan</h3>
+    <p>
+      Hover over a diagram and click the <strong>expand</strong> button in its top-right corner
+      (on touch screens the button sits below the diagram) to open it over the whole preview,
+      where it stays sharp at any zoom level:
+    </p>
+    <ul>
+      <li><strong>Move</strong> — drag with the mouse or a finger, or use the arrow keys.</li>
+      <li><strong>Zoom</strong> — mouse wheel, trackpad or touch pinch, double-click,
+        the zoom buttons at the bottom, or the <kbd>+</kbd> / <kbd>-</kbd> keys.</li>
+      <li><strong>Fit</strong> — the fit button or <kbd>0</kbd> shows the whole diagram again.</li>
+      <li><strong>Close</strong> — the close button or <kbd>Esc</kbd>.</li>
+    </ul>
+    <p>
+      Diagrams are drawn in an isolated sandbox: they cannot run scripts
+      or access the document or your account. Mermaid is downloaded only when
+      a diagram is about to be shown.
     </p>
 
     <h2>Theme</h2>

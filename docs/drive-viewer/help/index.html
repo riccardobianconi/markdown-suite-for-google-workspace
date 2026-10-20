@@ -56,7 +56,46 @@
       The viewer renders your Markdown file using full CommonMark support via markdown-it,
       including syntax-highlighted code blocks (highlight.js), GFM extensions
       (tables, footnotes, task lists, highlights, subscript, superscript),
-      and automatic anchor links on headings for in-page navigation.
+      automatic anchor links on headings for in-page navigation,
+      and <a href="#mermaid-diagrams">Mermaid diagrams</a>.
+    </p>
+
+    <h2 id="mermaid-diagrams">Mermaid diagrams</h2>
+    <p>
+      Code blocks tagged <code>mermaid</code> are drawn as diagrams
+      (see the <a href="https://mermaid.js.org/intro/syntax-reference.html">Mermaid syntax reference</a>).
+      Every diagram type of Mermaid 12 is supported —
+      flowcharts, sequence, class, state, entity-relationship, Gantt, pie, mind maps,
+      timelines, Git graphs and more — except ZenUML, which is a separate plugin.
+      Math in labels (<code>$$…$$</code>) and the ELK layout (<code>layout: elk</code>) work too.
+    </p>
+    <p>
+      Diagrams are drawn as they come into view, so a long file with many
+      diagrams opens as quickly as one without; until then you see the diagram's source.
+      They follow the light or dark theme (a theme set inside the diagram is ignored),
+      and links in a diagram open in a new tab.
+    </p>
+    <p>
+      If a diagram contains an error, its source stays visible with Mermaid's
+      error message underneath, which usually points to the line and position of the problem.
+    </p>
+    <h3 id="zoom-and-pan">Zoom and pan</h3>
+    <p>
+      Hover over a diagram and click the <strong>expand</strong> button in its top-right corner
+      (on touch screens the button sits below the diagram) to open it in a full-window view,
+      where it stays sharp at any zoom level:
+    </p>
+    <ul>
+      <li><strong>Move</strong> — drag with the mouse or a finger, or use the arrow keys.</li>
+      <li><strong>Zoom</strong> — mouse wheel, trackpad or touch pinch, double-click,
+        the zoom buttons at the bottom, or the <kbd>+</kbd> / <kbd>-</kbd> keys.</li>
+      <li><strong>Fit</strong> — the fit button or <kbd>0</kbd> shows the whole diagram again.</li>
+      <li><strong>Close</strong> — the close button or <kbd>Esc</kbd>.</li>
+    </ul>
+    <p>
+      Diagrams are drawn in an isolated sandbox: they cannot run scripts
+      or access the file or your account. Mermaid is downloaded only when
+      a diagram is about to be shown.
     </p>
 
     <h2>Working with multiple files</h2>
